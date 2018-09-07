@@ -10,7 +10,7 @@
 <h2>Menu</h2>
 <ul>
 <?php foreach($menus->result() as $menu): ?>
-  <li><?= $menu->menu_text ?></li>
+  <li><a href='<?= $menu->menu_link ?>' target='<?= $menu->menu ?>'><?= $menu->menu_text ?></a></li>
 <?php endforeach; ?>
 </ul>
 </div>
