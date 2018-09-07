@@ -5,6 +5,8 @@ class Main extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('main_page');
+		$this->load->model('SiteModel');
+		$data['menus'] = $this->SiteModel->getMenu('main');
+		$this->load->view('main_page',$data);
 	}
 }

@@ -9,6 +9,9 @@
 <div class="col-md-3 bg-primary text-white">
 <h2>Menu</h2>
 <ul>
+<?php foreach($menus->result() as $menu): ?>
+  <li><?= $menu->menu_text ?></li>
+<?php endforeach; ?>
 <li>เกี่ยวกับองค์กร</li>
 <li>บุคลากร</li>
 <li>ขั้นตอนการให้บริการ</li>
