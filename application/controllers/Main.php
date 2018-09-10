@@ -17,16 +17,13 @@ class Main extends CI_Controller {
 		$this->load->view($name,$data);
 	}
 
-	public function about()
+	public function staff_login()
 	{
+		$user = $_POST["staff_user"];	
+		$password = $_POST["password"];	
 		$this->load->model('SiteModel');
-		$data['menus'] = $this->SiteModel->getMenu('main');
-		$this->load->view('about',$data);
+		$this->SiteModel->staff_login($user,$password);
 	}
-	public function service_step()
-	{
-		$this->load->model('SiteModel');
-		$data['menus'] = $this->SiteModel->getMenu('main');
-		$this->load->view('service_step',$data);
-	}
+
+		
 }

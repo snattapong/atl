@@ -8,4 +8,7 @@ class SiteModel extends CI_Model {
 		return $query;
 	}
 
+	public function login($username,$password,$remember){
+	
+	}
 }
