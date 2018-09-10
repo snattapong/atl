@@ -5,9 +5,16 @@ class Main extends CI_Controller {
 
 	public function index()
 	{
+		$this->page('main_page');
+
+	}
+
+	public function page($name)
+	{
+
 		$this->load->model('SiteModel');
 		$data['menus'] = $this->SiteModel->getMenu('main');
-		$this->load->view('main_page',$data);
+		$this->load->view($name,$data);
 	}
 
 	public function about()

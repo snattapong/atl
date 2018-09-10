@@ -1,7 +1,7 @@
 -- --------------------------------------------------------
--- Host:                         127.0.0.1
--- Server version:               10.3.9-MariaDB - Homebrew
--- Server OS:                    osx10.13
+-- Host:                         localhost
+-- Server version:               10.1.21-MariaDB - mariadb.org binary distribution
+-- Server OS:                    Win32
 -- HeidiSQL Version:             9.5.0.5196
 -- --------------------------------------------------------
 
@@ -21,17 +21,16 @@ CREATE TABLE IF NOT EXISTS `menu` (
   PRIMARY KEY (`menu_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4;
 
--- Dumping data for table atldb.menu: ~0 rows (approximately)
-DELETE FROM `menu`;
+-- Dumping data for table atldb.menu: ~7 rows (approximately)
 /*!40000 ALTER TABLE `menu` DISABLE KEYS */;
 INSERT INTO `menu` (`menu_id`, `group_name`, `menu_text`, `menu_link`) VALUES
-	(1, 'main', 'หน้าแรก', 'http://localhost'),
-	(2, 'main', 'เกี่ยวกับองค์กร', '#'),
-	(3, 'main', 'บุคลากร', '#'),
-	(4, 'main', 'ขั้นตอนการให้บริการ', '#'),
-	(5, 'main', 'อัตราการให้บริการ', '#'),
-	(6, 'main', 'วิธีการชำระเงิน', '#'),
-	(7, 'main', 'ติดต่อเรา', '#');
+	(1, 'main', 'หน้าแรก', 'main_page'),
+	(2, 'main', 'เกี่ยวกับองค์กร', 'about'),
+	(3, 'main', 'บุคลากร', 'staff'),
+	(4, 'main', 'ขั้นตอนการให้บริการ', 'service_step'),
+	(5, 'main', 'อัตราการให้บริการ', 'rate'),
+	(6, 'main', 'วิธีการชำระเงิน', 'payment'),
+	(7, 'main', 'ติดต่อเรา', 'contact_us');
 /*!40000 ALTER TABLE `menu` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;

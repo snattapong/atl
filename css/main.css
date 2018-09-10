@@ -1,3 +1,47 @@
 .header-banner{
 	background-color: lightblue;
+	padding: 50px;
+	margin-bottom: 10px;
+}
+
+.footer{
+	margin-top: 15px;
+	background-color: lightblue;
+	padding: 50px;
+}
+
+.img-padding{
+			margin-top:30px;
+			margin-bottom:30px;
+}
+
+#left-menu > li > a {
+	 color: white;
+}
+
+h2.page-title{
+		color: orange;
+		margin-bottom : 30px;
+}
+
+h3.page-title{
+		color: blue;
+		font-size: 1.5em;
+}
+
+div.page-content{
+		padding: 15px;
+}
+
+p.page-content{
+	text-indent: 30px;
+	padding : 10px;
+}
+
+ol.content-ol{
+
+}
+.content-ol li{
+		padding-left: 10px;
+
 }
