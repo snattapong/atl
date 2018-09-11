@@ -6,7 +6,6 @@ class Main extends CI_Controller {
 	public function index()
 	{
 		$this->page('main_page');
-
 	}
 
 	public function page($name)
@@ -25,5 +24,22 @@ class Main extends CI_Controller {
 		$this->SiteModel->staff_login($user,$password);
 	}
 
+	public function staff($page="main")
+	{
+			if($this->session->has_userdata('user_id') &&  $this->session->authority == 2)
+			{
+				  $this->load->model('SiteModel');
+					$data['menus'] = $this->SiteModel->getMenu('staff');
+					if($page == "main")
+						$data['staff_info'] = $this->SiteModel->getStaffInfo();
+					$this->load->view("staff/$page",$data);
+			}
+	}
+
+	public function logout()
+	{		
+			$this->session->sess_destroy();
+			redirect(site_url());
+	}
 		
 }

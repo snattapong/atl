@@ -14,7 +14,7 @@
 
 <div class="col-md-9 bg-white page-content">
 
-<h2 class="page-title">Login</h2>
+<h2 class="page-title">เข้าสู่ระบบ<small>(staff)</small></h2>
 <form method="POST" action="<?= site_url('main/staff_login') ?>">
   <div class="form-group">
     <label for="staff_user">Username</label>
@@ -42,3 +42,7 @@
 <?php 
 	$this->load->view("footer");
 ?>
+
+<script>
+	$('#staff_user').focus();
+</script>
