@@ -14,7 +14,7 @@
 
 <div class="col-md-9 bg-white page-content">
 
-<h2 class="page-title">หน้าของ<small>(staff service)</small></h2>
+<h2 class="page-title">คำขอรับบริการ</h2>
 
 </div>
 

@@ -30,8 +30,13 @@ class Main extends CI_Controller {
 			{
 				  $this->load->model('SiteModel');
 					$data['menus'] = $this->SiteModel->getMenu('staff');
-					if($page == "main")
+					if($page == "main"){
 						$data['staff_info'] = $this->SiteModel->getStaffInfo();
+					}
+					if($page == "customer"){
+				  	$this->load->model('CustomerModel');
+						$data['customers'] = $this->CustomerModel->getCustomerContact();
+					}
 					$this->load->view("staff/$page",$data);
 			}
 	}

@@ -44,5 +44,8 @@
 ?>
 
 <script>
-	$('#staff_user').focus();
+	$("input").on("click", function () {
+   	$(this).select();
+	});
+
 </script>
